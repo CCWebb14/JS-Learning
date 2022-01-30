@@ -4,16 +4,16 @@ const guesses = document.querySelector('.guesses');
 const lastResult = document.querySelector('.lastResult');
 const lowOrHi = document.querySelector('.lowOrHi');
 // let lowOrHi = '';
-// let guessSubmit = document.querySelector('.guessSubmit');
+const guessSubmit = document.querySelector('.guessSubmit');
 const guessField = document.querySelector('.guessField');
 
 let guessCount = 1;
 
-// guessSubmit.addEventListener("click", checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 
 // const catchElem = document.getElementById("guessSubmit");
 
-document.getElementById("guessSubmit").addEventListener("click", checkGuess);
+// document.getElementById("guessSubmit").addEventListener("click", checkGuess);
 
 
 
@@ -57,11 +57,11 @@ function setGameOver() {
     guessField.disabled = true;
     guessSubmit.disabled = true;
     resetButton = document.createElement('button');
-    resetButton.setAttribute("id", "resetButton");
+    // resetButton.setAttribute("id", "resetButton");
     resetButton.textContent = 'Start new game';
     document.body.appendChild(resetButton);
-    document.getElementById("resetButton").addEventListener("click", resetGame);
-    // resetButton.addeventListener('click', resetGame);
+    // document.getElementById("resetButton").addEventListener("click", resetGame);
+    resetButton.addEventListener('click', resetGame);
 }
 
 function resetGame() {
